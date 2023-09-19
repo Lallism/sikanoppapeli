@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sikanoppapeli</title>
+</head>
+<body>
+    <main>
+        <div class="left-column">
+            <div id="settings">
+                <form name="settings" id="settings-form">
+                    <div class="center-h">
+                        <label for="players-amount" class="label">Pelaajia: </label>
+                        <input type="number" name="players-amount" id="players-amount" value="2"><br>
+                    </div>
+                    <div class="center-h">
+                        <label for="score-goal" class="label">Pisteraja: </label>
+                        <input type="number" name="score-goal" id="score-goal" value="100"><br>
+                    </div>
+                    <div class="center-h">
+                        <label class="label">Noppia:</label>
+                        <input type="radio" name="dice-amount" id="d-amount-1" value="1" checked>
+                        <label for="d-amount-1">1 noppa </label>
+                        <input type="radio" name="dice-amount" id="d-amount-2" value="2">
+                        <label for="d-amount-2">2 noppaa </label><br>
+                    </div>
+                    <div class="center-h">
+                        <input type="submit" value="Seuraava" class="button">
+                    </div>
+                    <p id="players-warning" class="hidden">Pelaajia pitää olla vähintään kaksi</p>
+                    <p id="score-warning" class="hidden">Pisterajan pitää olla vähintään 100</p>
+                </form>
+            </div>
+            <div id="name-select" class="hidden">
+                <p class="center-h">Anna pelaajien nimet</p>
+                <form id="names-form">
+                    <div class="center-h">
+                        <input type="submit" value="Aloita" class="button">
+                    </div>
+                    <p id="names-warning" class="hidden">Anna kaikille pelaajille nimet</p>
+                </form>
+            </div>
+            <div id="game" class="hidden">
+                <p id="turn-text" class="center-h">Pelaajan x vuoro</p>
+                <div class="center-h">
+                    <img src="gfx/dice1.png" id="dice-1" class="dice">
+                    <img src="gfx/dice1.png" id="dice-2" class="hidden"><br>
+                </div>
+                <p id="score-text" class="center-h">Vuoron pisteet: 0</p>
+                <div class="center-h">
+                    <button id="throw-button" class="button">Heitä</button>
+                    <button id="end-button" class="button">Lopeta vuoro</button>
+                </div>
+                <div class="center-h">
+                    <p id="win-text" class="hidden">Pelaaja x voitti!</p>
+                </div>
+                <div class="center-h">
+                    <button id="new-game" class="hidden button">Uusi peli</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div id="scoreboard">
+                <p class="center-h">Pisteet</p>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
